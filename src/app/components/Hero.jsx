@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <main className="min-h-screen bg-black text-white flex flex-col font-sans">
             {/* HERO*/}
-            <section className="flex-1 flex flex-col justify-between p-6 md:p-16 gap-4 md:gap-8">
+            <section className="md:flex-1 flex flex-col justify-between p-6 md:p-16 gap-4 md:gap-8">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ const Hero = () => {
             </section>
 
             {/* SUBTITLE */}
-            <section className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4 p-6 md:p-16 bg-black">
+            <section className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4 p-6 md:p-16 bg-black mt-20 md:mt-0">
                 <motion.div
                     className="max-w-xs text-xs tracking-widest text-gray-300"
                     initial={{ opacity: 0, x: -50 }}
@@ -46,12 +46,12 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.div
-                    className="flex items-center justify-start md:justify-end"
+                    className="flex items-center justify-end md:justify-end md:mt-0 mt-10"
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                 >
-                    <span className="text-3xl sm:text-4xl md:text-8xl font-light tracking-tight text-left md:text-right">
+                    <span className="text-3xl sm:text-4xl md:text-8xl font-light tracking-tight text-right">
                         FULL-STACK
                         <br /> DEV
                     </span>
