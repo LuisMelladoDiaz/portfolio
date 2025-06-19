@@ -40,7 +40,7 @@ const Projects = () => {
                 },
                 {
                     url: "https://www.daspritam.in/",
-                    label: "Style Inspiration",
+                    label: "‎ Style  ‎  Inspiration ‎",
                 },
                 {
                     url: "https://github.com/LuisMelladoDiaz/Portfolio-Luis-Mellado",
