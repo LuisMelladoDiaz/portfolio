@@ -17,7 +17,7 @@ const About = () => {
             <section className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-6">
                 {/* Left column - Image */}
                 <div className="flex flex-col items-center md:items-start w-full md:w-auto">
-                    <div className="w-48 h-48 md:w-64 md:h-[200] rounded-xl overflow-hidden bg-neutral-800">
+                    <div className="w-48 h-48 md:w-64 md:h-[200] rounded-xl overflow-hidden bg-black">
                         <img
                             src="/placeholder8.jpg"
                             alt="Luis Mellado portrait"

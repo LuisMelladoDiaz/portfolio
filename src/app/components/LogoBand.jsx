@@ -10,7 +10,7 @@ const logos = [
 
 export default function LogoBand() {
     return (
-        <div className="w-full py-6 bg-neutral-800">
+        <div className="w-full py-6 bg-black">
             <Marquee gradient={false} speed={40} pauseOnHover={true}>
                 {logos.map((src, i) => (
                     <img

@@ -77,8 +77,8 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
         <div className={`flex flex-col lg:flex-row gap-6 p-6 rounded-xl w-full`}>
             {/* Sección de Media */}
             <div className="w-full lg:w-1/2">
-                <div className="bg-neutral-800 rounded-xl overflow-hidden">
-                    <div className="relative w-full h-[250px] lg:h-[300px] overflow-hidden bg-neutral-800 flex items-center justify-center">
+                <div className="bg-black rounded-xl overflow-hidden">
+                    <div className="relative w-full h-[250px] lg:h-[300px] overflow-hidden bg-black flex items-center justify-center">
                         {/* Mostrar imagen o video según disponibilidad */}
                         {src && !vid ? (
                             <img src={src || "/placeholder.svg"} alt={title || "Proyecto"} className="object-cover w-auto h-auto" />
@@ -99,7 +99,7 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                                 {/* Botón de sonido */}
                                 <button
                                     onClick={toggleMute}
-                                    className="absolute bottom-4 right-4 p-3 bg-neutral-800/70 hover:bg-neutral-800/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
+                                    className="absolute bottom-4 right-4 p-3 bg-black/70 hover:bg-black/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
                                     aria-label={isMuted ? "Activar sonido" : "Desactivar sonido"}
                                 >
                                     {isMuted ? (
@@ -117,7 +117,7 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                                 )}
                             </div>
                         ) : (
-                            <div className="w-full h-full bg-neutral-800 flex items-center justify-center">
+                            <div className="w-full h-full bg-black flex items-center justify-center">
                                 <span className="text-gray-500 text-sm">Sin media disponible</span>
                             </div>
                         )}
@@ -145,7 +145,7 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                             {technologies.map((tech, index) => (
                                 <span
                                     key={index}
-                                    className="px-3 py-1 rounded-full border border-neutral-600 text-xs text-white bg-neutral-800/50 hover:bg-neutral-700/50 transition-colors"
+                                    className="px-3 py-1 rounded-full border border-neutral-600 text-xs text-white bg-black/50 hover:bg-neutral-700/50 transition-colors"
                                 >
                                     {tech}
                                 </span>
