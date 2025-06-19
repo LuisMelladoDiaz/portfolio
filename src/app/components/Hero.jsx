@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const Hero = () => {
     return (
-        <main className="min-h-screen bg-black text-white flex flex-col font-sans">
+        <main className="min-h-screen bg-neutral-800 text-white flex flex-col font-sans">
             {/* HERO*/}
             <section className="md:flex-1 flex flex-col justify-between p-6 md:p-16 gap-4 md:gap-8">
                 <motion.div
@@ -19,7 +19,7 @@ const Hero = () => {
             </section>
 
             {/* SUBTITLE */}
-            <section className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4 p-6 md:p-16 bg-black mt-20 md:mt-0">
+            <section className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4 p-6 md:p-16 bg-neutral-800 mt-20 md:mt-0">
                 <motion.div
                     className="max-w-xs text-xs tracking-widest text-gray-300"
                     initial={{ opacity: 0, x: -50 }}

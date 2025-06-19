@@ -1,7 +1,7 @@
 "use client"
 
-import { ExternalLink, Volume2, VolumeX, Github, Globe } from "lucide-react"
-import { useRef, useEffect, useState } from "react"
+import { ExternalLink, Github, Globe, Volume2, VolumeX } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
 
 const Project_card = ({ className, title, src, vid, technologies, year, desc, links, link }) => {
     const videoRef = useRef(null)
@@ -77,8 +77,8 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
         <div className={`flex flex-col lg:flex-row gap-6 p-6 rounded-xl w-full`}>
             {/* Sección de Media */}
             <div className="w-full lg:w-1/2">
-                <div className="bg-black rounded-xl overflow-hidden">
-                    <div className="relative w-full h-[250px] lg:h-[300px] overflow-hidden bg-black flex items-center justify-center">
+                <div className="bg-neutral-800 rounded-xl overflow-hidden">
+                    <div className="relative w-full h-[250px] lg:h-[300px] overflow-hidden bg-neutral-800 flex items-center justify-center">
                         {/* Mostrar imagen o video según disponibilidad */}
                         {src && !vid ? (
                             <img src={src || "/placeholder.svg"} alt={title || "Proyecto"} className="object-cover w-auto h-auto" />
@@ -99,7 +99,7 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                                 {/* Botón de sonido */}
                                 <button
                                     onClick={toggleMute}
-                                    className="absolute bottom-4 right-4 p-3 bg-black/70 hover:bg-black/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
+                                    className="absolute bottom-4 right-4 p-3 bg-neutral-800/70 hover:bg-neutral-800/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
                                     aria-label={isMuted ? "Activar sonido" : "Desactivar sonido"}
                                 >
                                     {isMuted ? (

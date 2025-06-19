@@ -1,6 +1,6 @@
 export default function TechServices() {
     return (
-        <section className="w-full min-h-[350px] max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-stretch bg-black">
+        <section className="w-full min-h-[350px] max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-stretch bg-neutral-800">
             {/* Columna izquierda */}
             <div className="flex-1 flex flex-col justify-between gap-8 p-6 md:p-10">
                 <div>
