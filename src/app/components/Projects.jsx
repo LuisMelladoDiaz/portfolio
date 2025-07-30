@@ -66,6 +66,33 @@ const Projects = () => {
                 },
             ],
         },
+        {
+            id: "otherworldly",
+            title: "Otherworldly – Puzzle Visual Novel",
+            vid: "otherworldly.mp4",
+            technologies: ["Godot", "GDScript", "Photoshop"],
+            year: "2025",
+            description:
+                "Otherworldly is a mystery-driven visual novel with puzzle mechanics, developed in just one week by a two-person team for the Level Up Game Jam 2025. You play as a detective tasked with uncovering a hidden truth by spotting subtle inconsistencies in photographs tied to the suspect’s routine. It ranked 11th out of 140 entries and received an honorable mention for Best Visual Design. I led programming and game design, while my teammate was responsible for the art and visual direction.",
+            className: "w-full md:w-[400px]",
+            links: [
+                {
+                    url: "https://ireca-y-luinki.itch.io/otherworldly",
+                    label: "Play on Itch.io",
+                    type: "More",
+                },
+                {
+                    url: "https://itch.io/jam/level-up-game-jam-2025/rate/3717252",
+                    label: "Submission Page",
+                    type: "More",
+                },
+                {
+                    url: "https://www.instagram.com/irecabarba/",
+                    label: "Ireca (The Artist)",
+                    type: "More",
+                }
+            ],
+        },
     ]
 
     return (
@@ -92,16 +119,16 @@ const Projects = () => {
                     />
                 </div>
 
-                {/* Portfolio Project - Right Aligned */}
+                {/* Otherworldly - Right Aligned */}
                 <div className="flex justify-center md:justify-end">
                     <Project_card
-                        className={projectsData[1].className}
-                        title={projectsData[1].title}
-                        src={projectsData[1].src}
-                        technologies={projectsData[1].technologies}
-                        year={projectsData[1].year}
-                        desc={projectsData[1].description}
-                        links={projectsData[1].links}
+                        className={projectsData[3].className}
+                        title={projectsData[3].title}
+                        vid={projectsData[3].vid}
+                        technologies={projectsData[3].technologies}
+                        year={projectsData[3].year}
+                        desc={projectsData[3].description}
+                        links={projectsData[3].links}
                     />
                 </div>
 
@@ -118,9 +145,24 @@ const Projects = () => {
                         }
                     />
                 </div>
+
+                {/* Portfolio Project - Right Aligned */}
+                <div className="flex justify-center md:justify-end">
+                    <Project_card
+                        className={projectsData[1].className}
+                        title={projectsData[1].title}
+                        src={projectsData[1].src}
+                        technologies={projectsData[1].technologies}
+                        year={projectsData[1].year}
+                        desc={projectsData[1].description}
+                        links={projectsData[1].links}
+                    />
+                </div>
+
+
             </div>
         </section>
     )
 }
-
 export default Projects
+

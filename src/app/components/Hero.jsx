@@ -11,7 +11,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <h1 className="text-4xl sm:text-5xl md:text-8xl font-light leading-tight md:leading-none tracking-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-[160px] font-light leading-tight md:leading-none tracking-tight">
                         I AM
                         <br /> LUIS MELLADO
                     </h1>
@@ -19,15 +19,15 @@ const Hero = () => {
             </section>
 
             {/* SUBTITLE */}
-            <section className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4 p-6 md:p-16 bg-black mt-20 md:mt-0">
+            <section className="flex flex-col md:flex-row md:justify-between gap-6 md:gap-4 p-6 md:p-16 bg-black mt-20 md:mt-0 ml-3">
                 <motion.div
                     className="max-w-xs text-xs tracking-widest text-gray-300"
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
                 >
-                    <span className="uppercase">
-                        I design and develop digital experiences for people and help them grow their business.
+                    <span className="uppercase text-justify">
+                        Love building cool things on computers. Always learning. Full-stack dev by day, gamer by night.
                         <br />
                     </span>
                     <motion.a
@@ -51,7 +51,7 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
                 >
-                    <span className="text-3xl sm:text-4xl md:text-8xl font-light tracking-tight text-right">
+                    <span className="text-3xl sm:text-4xl md:text-8xl lg:text-[150px] font-light tracking-tight text-right">
                         FULL-STACK
                         <br /> DEV
                     </span>

@@ -18,18 +18,18 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                     setIsVisible(entry.isIntersecting)
 
                     if (entry.isIntersecting) {
-                        // Video entra en pantalla - reproducir
                         video.play().catch(console.error)
                     } else {
-                        // Video sale de pantalla - pausar
                         video.pause()
                     }
                 })
             },
             {
-                threshold: 0.5, // Se activa cuando el 50% del video es visible
-                rootMargin: "0px",
-            },
+                // 75% visible para considerarlo "en el centro"
+                threshold: 0.75,
+                // Margen para centrar la zona de observación en el centro vertical
+                rootMargin: "-25% 0px -25% 0px",
+            }
         )
 
         observer.observe(video)
@@ -47,7 +47,6 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
         }
     }
 
-    // Función para obtener el icono según el tipo de link
     const getLinkIcon = (type) => {
         switch (type) {
             case "github":
@@ -60,12 +59,10 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
         }
     }
 
-    // Procesar links - mantener compatibilidad con prop 'link' antigua
     const processedLinks = () => {
         if (links && Array.isArray(links)) {
             return links
         } else if (link) {
-            // Compatibilidad con la prop 'link' antigua
             return [{ url: link, label: "More", type: "external" }]
         }
         return []
@@ -76,12 +73,15 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
     return (
         <div className={`flex flex-col lg:flex-row gap-6 p-6 rounded-xl w-full`}>
             {/* Sección de Media */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 max-w-[640px] mx-auto">
                 <div className="bg-black rounded-xl overflow-hidden">
-                    <div className="relative w-full h-[250px] lg:h-[300px] overflow-hidden bg-black flex items-center justify-center">
-                        {/* Mostrar imagen o video según disponibilidad */}
+                    <div className="relative w-full aspect-[16/9] overflow-hidden bg-black flex items-center justify-center">
                         {src && !vid ? (
-                            <img src={src || "/placeholder.svg"} alt={title || "Proyecto"} className="object-cover w-auto h-auto" />
+                            <img
+                                src={src || "/placeholder.svg"}
+                                alt={title || "Proyecto"}
+                                className="object-cover w-full h-full"
+                            />
                         ) : vid ? (
                             <div className="relative w-full h-full">
                                 <video
@@ -127,7 +127,6 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
 
             {/* Sección de Información */}
             <div className="w-full lg:w-1/2 flex flex-col justify-between space-y-4">
-                {/* Header con título y año */}
                 <div className="space-y-4">
                     <div className="flex items-center justify-between gap-4">
                         <h3 className="text-xl lg:text-2xl font-bold text-white leading-tight flex-1">{title}</h3>
@@ -139,7 +138,6 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                         )}
                     </div>
 
-                    {/* Tecnologías */}
                     {technologies && technologies.length > 0 && (
                         <div className="flex flex-wrap gap-2">
                             {technologies.map((tech, index) => (
@@ -153,11 +151,9 @@ const Project_card = ({ className, title, src, vid, technologies, year, desc, li
                         </div>
                     )}
 
-                    {/* Descripción */}
                     {desc && <p className="text-gray-400 text-2xs lg:text-2xs leading-relaxed text-justify">{desc}</p>}
                 </div>
 
-                {/* Botones de acción múltiples */}
                 {finalLinks.length > 0 && (
                     <div className="pt-2">
                         <div className="flex flex-wrap gap-3">
