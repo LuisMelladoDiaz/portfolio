@@ -15,9 +15,6 @@ export default function Home() {
       <Career />
       <Contact />
       <Footer />
-
-
-
     </>
   );
 }
